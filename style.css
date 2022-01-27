@@ -7,7 +7,6 @@ p {
   list-style: none;
   font-size: 1.2rem;
   font-family: 'Big Shoulders Display', cursive;
-  /* font-family: 'Lexend Deca', sans-serif; */
 }
 
 :root{
@@ -67,7 +66,7 @@ p {
 }
 
 /* LEARN MORE */
-.bottom {
+.button {
     display: block;
     text-align: left;
     margin-left: 40px;
@@ -75,68 +74,93 @@ p {
     padding: 20px 0;
 }
 
-.bottom a{
+.button a{
     text-decoration: none;
     padding: 15px 40px;
     border-radius: 30px;
     background: #fff;
 }
 
-.card1 .bottom a{
+.card1 .button a{
     color: var(--orange);
 }
 
-.card1 .bottom a:hover{
+.card1 .button a:hover{
     border: 2px solid #fff;
     color: #fff;
     background-color: var(--orange);
+    transition: .5s;
 }
 
-.card2 .bottom a{
+.card2 .button a{
     color: var(--light-blue);
 }
 
-.card2 .bottom a:hover{
+.card2 .button a:hover{
     border: 2px solid #fff;
     color: #fff;
     background-color: var(--light-blue);
+    transition: .5s;
 }
 
-.card3 .bottom a{
+.card3 .button a{
     color: var(--green);
 }
 
-.card3 .bottom a:hover{
+.card3 .button a:hover{
     border: 2px solid #fff;
     color: #fff;
     background-color: var(--green);
+    transition: .5s;
 }
 
 /* FOOTER */
 .attribution {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     opacity: .5;
 }
 .attribution a{
     text-decoration: none;
+
     color: #000;
 }
 
+/* RESPONSIVE */
 
 @media screen and (max-width: 900px) {
     .cards {
         display: grid;
         grid-template-columns: 1fr;
-        border-radius: 20px;
-        overflow: hidden;
+
     }
 
     .card1, .card2, .card3{
         /* width: 300px; */
-        height: 100vh;
-        width: 90vmin;
+        height: 80vh;
+        width: 90vw;
         margin: 0 auto;
+        border-radius: 10px 10px 0 0 ;
     }
+    .card2{
+
+        border-radius: 0 ;
+    }
+    .card3{
+
+        border-radius: 0 0 10px 10px ;
+    }
+
+    .attribution{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    
     
   }
